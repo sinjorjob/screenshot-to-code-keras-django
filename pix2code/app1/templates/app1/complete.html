@@ -1,0 +1,52 @@
+<!-- 親テンプレートを読み込む-->
+{% extends './base.html' %}
+{% load static %}
+{% block content %}
+<div class="content-wrapper">
+<div class="container-fluid">
+<div class="card mb-3">
+<div class="card-header">
+<h2><b>Upload Completed!</b></h2></div>
+<div class="card-body">
+<div class="mt-5 text-center">
+<div class="alert alert-primary alert-dismissible" role="alert">
+<h3 class=""><b>Upload Completed!</b></h3>
+<hr>
+<div class="mt-5 text-center">
+    {% if message %}
+   
+    <h4>{{message}}<br> </h4>
+  
+    {% endif %}
+
+</div>
+
+<div class="card-body">
+
+        
+        <label>
+          <a href="http://127.0.0.1:8000/media/html/{{PREDICTED_HTML}}">{{PREDICTED_HTML}}</a>
+        </label>
+        <br> 
+     
+
+
+</div>
+</div>
+{% if err_message %}<hr>
+<div class="alert alert-danger alert-dismissible" role="alert">
+    <p>Error Occured!!</p><br>
+    <p>{{err_args}}</p>
+    <p>{{err_message}}</p>
+</div>
+{% endif %}
+
+
+<a class="btn btn-lg btn-secondary"  href="{% url 'app1:upload' %}">戻る</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+{% endblock content %}

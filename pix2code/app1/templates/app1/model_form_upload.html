@@ -1,0 +1,52 @@
+<!-- 親テンプレートを読み込む-->
+{% extends './base.html' %}
+{% load static %}
+{% block content %}
+<div class="content-wrapper">
+<div class="container-fluid">
+<div class="mt-5 text-center">
+<div class="alert alert-primary alert-dismissible" role="alert">
+<p style="margin-bottom:1em;"><h3><b>ScreenShot To Html</b></h3></p>
+<hr>
+<h4>
+<ol>
+
+</ol>
+</h4>
+</div>
+</div>
+<hr>
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+   
+
+    {% for field in form %}
+    <div class="form-group">
+        {{ field.label_tag }}
+        {{ field }}
+
+        {% if field.help_text %}
+            <small class="form-text text-muted">{{ field.help_text }}</small>
+        {% endif %}
+
+        {% if field.errors %}
+        <hr>
+        {% for error in field.errors %}
+        <div class="alert alert-danger alert-dismissible" role="alert">
+            <p>Only png format is supported.</p>
+        </div>
+        {% endfor %}
+        {% endif %}
+    </div>
+{% endfor %}
+
+
+    <hr>
+    <button type="submit" class="btn btn-lg btn-primary">Upload</button>
+    
+</form>
+
+</div>
+</div>
+{% endblock content %}

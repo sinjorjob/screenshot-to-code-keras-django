@@ -1,0 +1,27 @@
+{% load static %}
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  {# Bootstrap4を使う #}
+  <!-- linkタグでbootstrapのcssファイルを読み込む -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  <!-- linkタグでDataTableのcssファイルを読み込む -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/t/bs-3.3.6/jqc-1.12.0,dt-1.10.11/datatables.min.css"/> 
+<!-- linkタグでcommon.cssファイルを読み込む -->
+
+  <!-- タイトルの設定-->
+  <title>Tutorial</title>
+<body>
+{% block content %}
+
+   <!-- block content ～ endblockの間に子テンプレートの内容が差し込まれる -->
+
+{% endblock %}
+
+<!-- bootstrapのjavascrit読み込み-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+</body>
+</html>
