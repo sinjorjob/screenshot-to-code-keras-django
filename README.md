@@ -5,7 +5,7 @@
 Made Screen-shot-to-code a Django app.
 
 【demo】
-https://youtu.be/wajrQF6N0gI
+![dmeo](https://user-images.githubusercontent.com/34405452/62125724-e84d4880-b308-11e9-9a68-69154c0c305c.gif)
 
 
 Operation has been confirmed in python 3.6, windows 10 environment.
